@@ -1,0 +1,23 @@
+{
+  "name": "t5mm.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm run dev -w packages/www\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HTeker/t5mm.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HTeker/t5mm.com/issues"
+  },
+  "homepage": "https://github.com/HTeker/t5mm.com#readme",
+  "description": "",
+  "workspaces": [
+    "packages/*"
+  ]
+}
