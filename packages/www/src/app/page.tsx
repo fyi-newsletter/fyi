@@ -67,8 +67,7 @@ export default function Home() {
         ) : (
           <>
             <h1>
-              Become a <span className="underlined">better professional</span>{" "}
-              in 5 minutes a day.
+              Become a<br/><span className="underlined">better professional</span><br/>in 5 minutes a day.
             </h1>
             <br />
             <form onSubmit={handleSubmit(onSubmit)} style={{ width: "100%" }}>

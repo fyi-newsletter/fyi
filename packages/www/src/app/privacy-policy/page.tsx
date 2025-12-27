@@ -17,10 +17,10 @@ export default function PrivacyPolicyPage() {
       <ul>
         <li>
           <strong>Email address:</strong> Required to send you the newsletters
-          you've subscribed to
+          you&apos;ve subscribed to
         </li>
         <li>
-          <strong>Newsletter preferences:</strong> Which newsletters you've
+          <strong>Newsletter preferences:</strong> Which newsletters you&apos;ve
           chosen to receive
         </li>
         <li>
@@ -31,7 +31,7 @@ export default function PrivacyPolicyPage() {
       <h2>How we use your information</h2>
       <p>We use your information exclusively to:</p>
       <ul>
-        <li>Send you the newsletters you've subscribed to</li>
+        <li>Send you the newsletters you&apos;ve subscribed to</li>
         <li>Manage your subscription preferences</li>
         <li>Improve our newsletter content and service</li>
         <li>Comply with legal obligations</li>
