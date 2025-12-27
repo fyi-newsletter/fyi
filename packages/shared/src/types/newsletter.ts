@@ -3,3 +3,7 @@ export enum NewsletterEnum {
 	Solopreneur = 'solopreneur',
 	LeadgenSpecialist = 'leadgen-specialist',
 }
+
+// export interface NewsletterProps {
+// 	type: NewsletterEnum
+// }

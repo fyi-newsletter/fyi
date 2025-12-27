@@ -56,7 +56,7 @@ export default function Home() {
       {isSubmitSuccessful ? (
         <>
           <h1>
-           You're <span className="underlined">almost</span> there...
+           You&apos;re <span className="underlined">almost</span> there...
           </h1>
 		  <br />
 		  <p>Check your email inbox (+ spam folder) for a confirmation link.</p>
