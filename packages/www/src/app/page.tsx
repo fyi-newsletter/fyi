@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
-      <main style={{ maxWidth: "30rem" }}>
+      <header>
         <Link href="/">
           <Image
             src="/img/t5mm-logo-dark-mode.svg"
@@ -21,9 +21,15 @@ export default function Home() {
             height={24}
           />
         </Link>
+      </header>
+      <main style={{ maxWidth: "30rem" }}>
         <br />
         <br />
-        <h1>Become a better professional in 5 mins a day.</h1>
+        <h1>
+          Become a{" "}
+          <span className={styles.curvedUnderline}>better solopreneur</span> in
+          5 mins a day.
+        </h1>
         <br />
         {/* <h3>Get free daily</h3> */}
         <h3>Newsletters</h3>
@@ -42,6 +48,10 @@ export default function Home() {
         </div>
         <p>The best news, insights and actionable tips from the web!</p>
       </main>
+      <footer>
+        <a href="#">Privacy policy</a>
+        <a href="#">Advertise</a>
+      </footer>
     </div>
   );
 }

@@ -10,12 +10,13 @@
   --button-secondary-border: #1a1a1a;
 
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-family: var(--font-geist-sans);
   background-color: var(--background);
-  padding: 1rem;
+  padding: 1.5rem 1rem;
 }
 
 .main {
@@ -125,4 +126,21 @@ a.secondary {
 
 .logo {
   filter: invert();
+}
+
+.marked {
+  background-color: #ffeb3b;
+  color: #000;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.curvedUnderline {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 12'%3E%3Cpath d='M 2,9 C 30,8.5 60,7.2 90,6.8 C 120,6.5 150,6.2 180,5.8 C 210,5.3 240,4.8 270,4.5 C 285,4.3 292,4.1 298,4' stroke='%23ffeb3b' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: auto 8px;
+  padding-bottom: 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
