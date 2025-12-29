@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"npm run dev -w packages/shared\" \"npm run dev -w packages/www\" \"npm run start:dev -w packages/api\"",
+    "dev": "concurrently \"npm run dev -w packages/shared\" \"npm run dev -w packages/www\" \"npm run start:dev:all -w packages/api\"",
     "build": "npm run build -w packages/shared && npm run build -w packages/www"
   },
   "repository": {
