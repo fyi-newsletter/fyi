@@ -1,9 +1,9 @@
 <!-- - deploy www -->
 - deploy api
+  - db layer
   - POST /subscriptions
   - POST /subscribers/:uuid/verify
   - transactional emails
-  - db layer
 - implement pixel + CAPI
 - create FB & Insta + run ads
 

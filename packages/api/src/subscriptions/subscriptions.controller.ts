@@ -16,11 +16,11 @@ export class SubscriptionsController {
 	@Post()
 	async subscribe(@Body() body: CreateSubscriptionsRequest) {
 		const subscriber = await this.subscribersService.findOrCreate(body.email)
-		console.log('body', body)
-		return body
+		// console.log('body', body)
+		// return body
 
-		// for (const newsletter of body.newsletters) {
-		// 	await this.subscriptionsService.findOrCreate(subscriber.uuid, newsletter)
-		// }
+		for (const newsletter of body.newsletters) {
+			await this.subscriptionsService.findOrCreate(subscriber.uuid, newsletter)
+		}
 	}
 }
