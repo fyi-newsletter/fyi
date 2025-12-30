@@ -6,7 +6,6 @@ import Link from "next/link";
 
 import i18n from "./i18n";
 import { TrackingPlatformEnum, TrackingProvider } from "@t5mm-com/tracking";
-import { isProdLike } from "@t5mm-com/shared";
 
 const InnerClientLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
