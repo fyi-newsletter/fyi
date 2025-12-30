@@ -3,11 +3,6 @@ import { CreateSubscriptionsRequest } from '@t5mm-com/shared';
 import { SubscriptionsService } from './subscriptions.service';
 import { SubscribersService } from 'src/subscribers/subscribers.service';
 
-// interface CreateSubscription {
-// 	email: string
-// 	newsletters: NewsletterEnum[]
-// }
-
 @Controller('subscriptions')
 export class SubscriptionsController {
   constructor(

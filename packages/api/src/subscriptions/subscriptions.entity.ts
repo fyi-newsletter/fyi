@@ -7,7 +7,6 @@ import {
   AfterLoad,
 } from 'typeorm';
 import { BaseEntity } from '../common/base.entity';
-// import { Exclude, Expose } from 'class-transformer';
 import { NewsletterEnum, SubscriptionProps } from '@t5mm-com/shared';
 import { SubscribersEntity } from 'src/subscribers/subscribers.entity';
 
@@ -41,5 +40,4 @@ export class SubscriptionsEntity
     if (!this.subscriber) return;
     this.subscriberEmail = this.subscriber.email;
   }
-  
 }

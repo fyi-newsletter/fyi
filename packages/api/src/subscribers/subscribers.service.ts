@@ -16,7 +16,7 @@ export class SubscribersService {
   async create(
     subscriber: OmitBase<SubscriberProps>,
   ): Promise<SubscribersEntity> {
-    this.logger.log(`Creating subscriber: ${subscriber}`);
+    this.logger.log(`Creating subscriber: ${JSON.stringify(subscriber)}`);
     return this.subscribersRepository.save(subscriber);
   }
 
