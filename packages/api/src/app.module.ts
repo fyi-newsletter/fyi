@@ -21,6 +21,7 @@ import { join } from 'path'
 				username: configService.get<string>('POSTGRES_USER'),
 				password: configService.get<string>('POSTGRES_PASSWORD'),
 				entities: [join(__dirname, '**', '*.entity.{ts,js}')],
+				subscribers: [join(__dirname, '**', '*.subscriber.{ts,js}')],
 				synchronize: configService.get<string>('SYNCHRONIZE_DB') === 'true'
 			}),
 		}),

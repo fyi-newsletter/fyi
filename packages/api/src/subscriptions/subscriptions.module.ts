@@ -6,8 +6,8 @@ import { SubscribersModule } from 'src/subscribers/subscribers.module';
 import { SubscriptionsEntity } from './subscriptions.entity';
 
 @Module({
-	imports: [TypeOrmModule.forFeature([SubscriptionsEntity]), SubscribersModule],
-	controllers: [SubscriptionsController],
-	providers: [SubscriptionsService]
+  imports: [TypeOrmModule.forFeature([SubscriptionsEntity]), SubscribersModule],
+  controllers: [SubscriptionsController],
+  providers: [SubscriptionsService],
 })
-export class SubscriptionsModule { }
+export class SubscriptionsModule {}

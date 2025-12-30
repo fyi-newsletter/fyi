@@ -1,10 +1,11 @@
 <!-- - deploy www -->
 - deploy api
-  - db layer
-  - POST /subscriptions
-  - POST /subscribers/:uuid/verify
+  <!-- - db layer -->
+  <!-- - POST /subscriptions -->
+  <!-- - POST /subscribers/:uuid/verify -->
   - transactional emails
 - implement pixel + CAPI
+- host on GCP
 - create FB & Insta + run ads
 
 Quick follow-up:
