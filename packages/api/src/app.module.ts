@@ -7,6 +7,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { join } from 'path';
 import { EmailModule } from './email/email.module';
+import { IpModule } from './ip/ip.module';
 
 @Module({
   imports: [
@@ -28,6 +29,7 @@ import { EmailModule } from './email/email.module';
     SubscribersModule,
     SubscriptionsModule,
     EmailModule,
+    IpModule,
   ],
   controllers: [AppController],
   providers: [AppService],

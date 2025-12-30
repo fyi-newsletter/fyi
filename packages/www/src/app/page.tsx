@@ -3,6 +3,7 @@
 import { NewsletterEnum } from "@t5mm-com/shared";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
+import { TrackingEventEnum, useTracking } from "@t5mm-com/tracking";
 
 type FormData = {
   email: string;
@@ -10,6 +11,7 @@ type FormData = {
 };
 
 export default function Home() {
+  const { track } = useTracking();
   const { t } = useTranslation();
   const searchParams = new URLSearchParams(
     typeof window !== "undefined" ? window.location.search : ""
@@ -42,10 +44,7 @@ export default function Home() {
   });
 
   const onSubmit = async (data: FormData) => {
-    console.log("=== FORM SUBMITTED ===");
-    console.log("Email:", data.email);
-    console.log("Newsletters:", data.newsletters);
-    console.log("Full data:", data);
+    track(TrackingEventEnum.Lead);
 
     await fetch(`${process.env.NEXT_PUBLIC_API_HOST}/subscriptions`, {
       method: "POST",
@@ -54,15 +53,6 @@ export default function Home() {
       },
       body: JSON.stringify(data),
     });
-
-    // Wait 5 seconds
-    // await new Promise((resolve) => setTimeout(resolve, 5000));
-
-    // alert(
-    //   `Form submitted! Email: ${
-    //     data.email
-    //   }, Newsletters: ${data.newsletters.join(", ")}`
-    // );
   };
 
   return (

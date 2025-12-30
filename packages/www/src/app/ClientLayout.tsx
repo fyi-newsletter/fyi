@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 import i18n from "./i18n";
+import { TrackingPlatformEnum, TrackingProvider } from "@t5mm-com/tracking";
+import { isProdLike } from "@t5mm-com/shared";
 
 const InnerClientLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -25,7 +27,7 @@ const InnerClientLayout: React.FC<{ children: React.ReactNode }> = ({
         </header>
         <main className="main">{children}</main>
         <footer style={{ fontSize: ".9rem" }}>
-          <div style={{ display: 'flex', gap: '.75rem' }}>
+          <div style={{ display: "flex", gap: ".75rem" }}>
             <Link href="/privacy-policy">Privacy policy</Link>
             <Link href="/advertise">Advertiser</Link>
           </div>
@@ -38,7 +40,27 @@ const InnerClientLayout: React.FC<{ children: React.ReactNode }> = ({
 const ClientLayout: React.FC<{
   children: React.ReactNode;
 }> = ({ children }) => {
-  return <InnerClientLayout>{children}</InnerClientLayout>;
+  return (
+    <TrackingProvider
+      value={{
+        integrations: [
+          {
+            platform: TrackingPlatformEnum.Meta,
+            pixel: {
+              id: process.env.NEXT_PUBLIC_META_PIXEL_ID || "",
+            },
+          },
+        ],
+        capiEndpoint: process.env.NEXT_PUBLIC_API_HOST + `/track`,
+        subdomainIndex: BigInt(0),
+        ipEndpoint: process.env.NEXT_PUBLIC_API_HOST + "/ip",
+        isEnabled: true, //isProdLike(),
+        hasConsented: true,
+      }}
+    >
+      <InnerClientLayout>{children}</InnerClientLayout>
+    </TrackingProvider>
+  );
 };
 
 export default ClientLayout;

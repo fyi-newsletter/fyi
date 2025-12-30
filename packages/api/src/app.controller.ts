@@ -1,12 +1,43 @@
-import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
+import { Body, Controller, Post } from '@nestjs/common';
+import {
+  TrackingCapiFactoryService,
+  TrackingEventDto,
+  TrackingIntegrationProps,
+  TrackingPlatformEnum,
+} from '@t5mm-com/tracking';
+import { ConfigService } from '@nestjs/config';
+import { getBaseProps } from '@t5mm-com/shared';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  conversionsApiFactoryService = new TrackingCapiFactoryService();
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  trackingIntegrations: TrackingIntegrationProps[];
+
+  constructor(private readonly configService: ConfigService) {
+    this.trackingIntegrations = [
+      {
+        ...getBaseProps(),
+        platform: TrackingPlatformEnum.Meta,
+        pixel: {
+          id: this.configService.get<string>('META_PIXEL_ID') || '',
+        },
+        capi: {
+          accessToken:
+            this.configService.get<string>('META_CAPI_ACCESS_TOKEN') || '',
+        },
+      },
+    ];
+  }
+
+  @Post('/track')
+  track(@Body() body: TrackingEventDto) {
+    const capiConfigs = this.trackingIntegrations.filter((i) => i.capi) || [];
+
+    const capiIntegrations = capiConfigs.map((config) =>
+      this.conversionsApiFactoryService.create(config),
+    );
+
+    capiIntegrations.forEach((service) => service.track(body.event, body.data));
   }
 }

@@ -4,7 +4,7 @@
   <!-- - POST /subscriptions -->
   <!-- - POST /subscribers/:uuid/verify -->
   <!-- - transactional emails -->
-- implement pixel + CAPI
+<!-- - implement pixel + CAPI -->
 - host on GCP
 - create FB & Insta + run ads
 
