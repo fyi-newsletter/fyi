@@ -4,6 +4,7 @@ import { NewsletterEnum } from "@t5mm-com/shared";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import { TrackingEventEnum, useTracking } from "@t5mm-com/tracking";
+import { useSearchParams } from "next/navigation";
 
 type FormData = {
   email: string;
@@ -13,9 +14,7 @@ type FormData = {
 export default function Home() {
   const { track } = useTracking();
   const { t } = useTranslation();
-  const searchParams = new URLSearchParams(
-    typeof window !== "undefined" ? window.location.search : ""
-  );
+  const searchParams = useSearchParams();
 
   const capitalizeFirst = (str: string) =>
     str.charAt(0).toUpperCase() + str.slice(1);

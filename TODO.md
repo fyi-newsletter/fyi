@@ -11,7 +11,7 @@
 Quick follow-up:
 <!-- - redirect alternative domains to primary -->
 <!-- - disable Meetgen QA -->
-- searchparams
+<!-- - searchparams -->
 - unsubscribe all
 - verify reminder up to 7 days
 

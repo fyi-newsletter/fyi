@@ -1,13 +1,12 @@
 "use client";
 
+import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function VerifySubscriberPage() {
   const [isLoading, setIsLoading] = useState(true);
 
-  const searchParams = new URLSearchParams(
-    typeof window !== "undefined" ? window.location.search : ""
-  );
+  const searchParams = useSearchParams();
 
   const tokenParam = searchParams.get("token");
 
