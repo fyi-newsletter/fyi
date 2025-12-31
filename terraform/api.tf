@@ -30,6 +30,11 @@ resource "google_cloud_run_v2_service" "api" {
 			}
 
 			env {
+				name  = "WWW_HOST"
+				value = local.env_vars.common.WWW_HOST
+			}
+
+			env {
 				name  = "POSTGRES_HOST"
 				value = "/cloudsql/${google_sql_database_instance.db.connection_name}"
 			}
