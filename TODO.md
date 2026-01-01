@@ -9,10 +9,10 @@ Problems to solve:
     <!-- - Add caption that user will get need to confirm using email link -->
     <!-- - Add a checkbox: "☑ I understand I need to confirm my email to start receiving T5MM" -->
   - revamp post form submit page
-    - show an ordered list of what they need to do
+    <!-- - show an ordered list of what they need to do -->
     - make it visually obvious that they just got an email and need to confirm
     - add "didn't receive email, resend confirmation email"
-    - it can take up to 30s to receive the email
+    <!-- - it can take up to 30s to receive the email -->
     - identify email provider from email and show provider-specific CTA (open Outlook)
     - Add exit intent popup on post-form page if the user is not verified yet
   - Revamp confirmation email

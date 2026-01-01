@@ -1,6 +1,15 @@
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Confirm your T5MM subscription (5 seconds)</title>
+  </head>
   <body style="background-color: white">
-    <table align="center" width="600" cellpadding="0" cellspacing="0">
+    <table
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      style="max-width: 600px; margin: 0 auto;"
+    >
       <tr>
         <td style="padding: 16px">
           <p
@@ -47,6 +56,7 @@
                 cursor: pointer;
                 text-decoration: none;
               "
+			  role="button"
               >Confirm signup</a
             >
           </p>
@@ -59,12 +69,12 @@
               overflow-wrap: anywhere;
             "
           >
-            <i
+            <em
               >If the button doesn’t work, copy and paste this link into your
               browser:
               <a href="{{confirmSignupLink}}" style="color: black">
                 {{confirmSignupLink}}
-              </a></i
+              </a></em
             >
           </p>
 

@@ -71,13 +71,16 @@ export default function HomePage() {
       <div style={{ maxWidth: "30rem" }}>
         {isSubmitSuccessful ? (
           <>
-            <h1>
-              You&apos;re <span className="underlined">almost</span> there...
-            </h1>
+            <h1>You&apos;re almost there...</h1>
+            <p>We just sent an email to you to confirm your subscription.</p>
             <br />
-            <p>
-              Check your email inbox (+ spam folder) for a confirmation link.
-            </p>
+            <ol>
+              <li>Open your email inbox</li>
+              <li>Find our email (can take up to 30 seconds)</li>
+              <li>Click the confirmation link in the email</li>
+            </ol>
+            <p>Didn't receive the email?</p>
+            <a href="">Resend</a>
           </>
         ) : (
           <>
