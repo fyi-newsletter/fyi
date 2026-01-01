@@ -98,7 +98,7 @@ locals {
 		production = {
 			common = {
 				ENV = "production"
-				META_PIXEL_ID = "918618570654690"
+				META_PIXEL_ID = "1199552608319196"
 				WWW_HOST = "https://thefiveminutemail.com"
 				API_HOST = "https://api.thefiveminutemail.com"
 			}

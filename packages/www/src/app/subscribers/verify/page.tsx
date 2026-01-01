@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 export default function VerifySubscriberPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,8 +30,10 @@ export default function VerifySubscriberPage() {
 
   return (
     <>
-      <h1>Confirm subscription</h1>
-      {isLoading ? <p>Loading...</p> : <p>Done! You&apos;re good to go!</p>}
+      <Suspense fallback={<div style={{ maxWidth: "30rem" }}>Loading...</div>}>
+        <h1>Confirm subscription</h1>
+        {isLoading ? <p>Loading...</p> : <p>Done! You&apos;re good to go!</p>}
+      </Suspense>
     </>
   );
 }

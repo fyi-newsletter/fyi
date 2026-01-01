@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import { TrackingEventEnum, useTracking } from "@t5mm-com/tracking";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 type FormData = {
   email: string;
@@ -55,7 +56,7 @@ export default function Home() {
   };
 
   return (
-    <>
+    <Suspense fallback={<div style={{ maxWidth: "30rem" }}>Loading...</div>}>
       <div style={{ maxWidth: "30rem" }}>
         {isSubmitSuccessful ? (
           <>
@@ -163,6 +164,6 @@ export default function Home() {
           </>
         )}
       </div>
-    </>
+    </Suspense>
   );
 }
