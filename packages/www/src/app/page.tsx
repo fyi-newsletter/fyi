@@ -106,9 +106,10 @@ export default function HomePage() {
             <br />
             <ol>
               <li>Open your email inbox</li>
-              <li>Find our email (can take up to 30 seconds)</li>
+              <li>Find our email (check spam folder)</li>
               <li>Click the confirmation link in the email</li>
             </ol>
+            <br />
             <p>Didn&apos;t receive the email?</p>
             <button
               data-variant="text"
