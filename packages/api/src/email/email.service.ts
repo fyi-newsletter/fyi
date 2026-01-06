@@ -1,5 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
+import { isValidEmail } from '@t5mm-com/shared';
 import { isProdLike } from '@t5mm-com/shared';
 import { SendMailClient } from 'zeptomail';
 
@@ -29,14 +30,20 @@ export class EmailService {
   send(params: SendEmailParams) {
     if (!isProdLike()) {
       this.logger.log(
-        'Current environment is not production-like. Email will not be sent but logged instead.',
+        'Current environment is not production-like. Email will not be sent but only logged.',
       );
       this.logger.log(params);
       return;
     }
 
+    this.logger.log('Sending email...');
+    this.logger.log(params);
+
     return this.zeptoClient.sendMail({
-      from: { address: 'newsletter@thefiveminutemail.com', name: 'T5MM by Halil' },
+      from: {
+        address: 'newsletter@thefiveminutemail.com',
+        name: 'T5MM by Halil',
+      },
       to: params.to.map((to) => ({
         email_address: { address: to.email, name: to.name },
       })),
@@ -53,5 +60,9 @@ export class EmailService {
         content: att.content,
       })),
     });
+  }
+
+  async isValid(email: string) {
+    return isValidEmail(email);
   }
 }

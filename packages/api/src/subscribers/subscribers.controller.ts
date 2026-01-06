@@ -1,4 +1,4 @@
-import { Body, Controller, Param, Post } from '@nestjs/common';
+import { Body, Controller, Logger, Param, Post } from '@nestjs/common';
 import { SubscriberProps } from '@t5mm-com/shared';
 import { SubscribersService } from 'src/subscribers/subscribers.service';
 
@@ -16,6 +16,8 @@ const emailTemplate = fs.readFileSync(templatePath, 'utf-8');
 
 @Controller('subscribers')
 export class SubscribersController {
+  private readonly logger = new Logger(SubscribersController.name);
+
   constructor(
     private readonly configService: ConfigService,
     private readonly subscribersService: SubscribersService,
@@ -37,7 +39,14 @@ export class SubscribersController {
   async sendVerificationEmail(@Param('email') email: SubscriberProps['email']) {
     const subscriber = await this.subscribersService.findOne(email);
 
-    if (!subscriber) return;
+    if (!subscriber) {
+      this.logger.log(
+        `Subscriber with email: ${email} does not exist. Cannot send verification email.`,
+      );
+      return;
+    }
+
+    this.logger.log(`Sending verification email for subscriber to: ${email}.`);
 
     const wwwHost = this.configService.get<string>('WWW_HOST');
     const confirmSignupLink = `${wwwHost}/subscribers/verify?token=${subscriber.uuid}`;
