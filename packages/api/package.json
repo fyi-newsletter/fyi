@@ -36,7 +36,7 @@
     "@nestjs/platform-express": "^11.0.1",
     "@nestjs/typeorm": "^11.0.0",
     "@fyi-newsletter/shared": "*",
-    "@fyi-newsletter/tracking": "1.0.13",
+    "@fyi-newsletter/tracking": "1.0.14",
     "class-transformer": "^0.5.1",
     "dns": "^0.2.2",
     "dotenv": "^16.4.7",
