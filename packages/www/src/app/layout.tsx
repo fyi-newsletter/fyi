@@ -9,7 +9,7 @@ const robotoCondensed = Roboto_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: "T5MM",
+  title: "FYI",
   description: "Become a better professional in 5 mins a day.",
 };
 

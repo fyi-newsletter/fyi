@@ -1,10 +1,10 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { getRootDomain } from '@t5mm-com/shared';
+import { getRootDomain } from '@fyi-newsletter/shared';
 
 const allowedDomains = [
 	'localhost',
-	'thefiveminutemail.com',
+	'readfyi.com',
 ]
 
 async function bootstrap() {

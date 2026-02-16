@@ -1,4 +1,4 @@
-import { enUS } from "@t5mm-com/shared";
+import { enUS } from "@fyi-newsletter/shared";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 

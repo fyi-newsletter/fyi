@@ -1,7 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { isValidEmail } from '@t5mm-com/shared';
-import { isProdLike } from '@t5mm-com/shared';
+import { isValidEmail } from '@fyi-newsletter/shared';
+import { isProdLike } from '@fyi-newsletter/shared';
 import { SendMailClient } from 'zeptomail';
 
 interface SendEmailParams {
@@ -41,8 +41,8 @@ export class EmailService {
 
     return this.zeptoClient.sendMail({
       from: {
-        address: 'newsletter@thefiveminutemail.com',
-        name: 'T5MM by Halil',
+        address: 'newsletter@readfyi.com',
+        name: 'FYI by Halil',
       },
       to: params.to.map((to) => ({
         email_address: { address: to.email, name: to.name },

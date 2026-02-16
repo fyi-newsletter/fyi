@@ -1,6 +1,6 @@
 import { Injectable, Logger, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { OmitBase, SubscriberProps } from '@t5mm-com/shared';
+import { OmitBase, SubscriberProps } from '@fyi-newsletter/shared';
 import { SubscribersEntity } from './subscribers.entity';
 import { Repository } from 'typeorm';
 import { validate as isUuid } from 'uuid';

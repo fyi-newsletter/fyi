@@ -12,12 +12,12 @@ variable "api_image_tag" {
 
 variable "db_name" {
   type    = string
-  default = "t5mm"
+  default = "fyi"
 }
 
 variable "db_user" {
   type    = string
-  default = "t5mm_user"
+  default = "fyi_user"
 }
 
 variable "db_password" {
@@ -32,7 +32,7 @@ variable "db_instance_tier" {
 variable "cloudflare_email" {
   description = "Email for Cloudflare"
   type = string
-  default = "halil@thefiveminutemail.com"
+  default = "halil@readfyi.com"
 }
 
 variable "cloudflare_account_id" {
@@ -82,7 +82,7 @@ locals {
 
 	hosts = {
 		# qa = "qa.verkoop24.nu"
-		production = "thefiveminutemail.com"
+		production = "readfyi.com"
 	}
 
 	env_vars_map = {
@@ -99,8 +99,8 @@ locals {
 			common = {
 				ENV = "production"
 				META_PIXEL_ID = "1199552608319196"
-				WWW_HOST = "https://thefiveminutemail.com"
-				API_HOST = "https://api.thefiveminutemail.com"
+				WWW_HOST = "https://readfyi.com"
+				API_HOST = "https://api.readfyi.com"
 			}
 			api = {
 				# GDRIVE_FUNNELS_DIRECTORY_ID = "1LD3HZTnIjl8AsyLwcnDuqQVIqnFs6AQo"

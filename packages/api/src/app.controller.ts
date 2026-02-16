@@ -4,9 +4,9 @@ import {
   TrackingEventDto,
   TrackingIntegrationProps,
   TrackingPlatformEnum,
-} from '@t5mm-com/tracking';
+} from '@fyi-newsletter/tracking';
 import { ConfigService } from '@nestjs/config';
-import { getBaseProps, IssueProps } from '@t5mm-com/shared';
+import { getBaseProps, IssueProps } from '@fyi-newsletter/shared';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 

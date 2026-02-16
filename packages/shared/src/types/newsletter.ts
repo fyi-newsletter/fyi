@@ -1,8 +1,11 @@
 export enum NewsletterEnum {
-	DigitalAdvertiser = 'digital-advertiser',
-	Solopreneur = 'solopreneur',
-	LeadgenSpecialist = 'leadgen-specialist',
-	// CEO = 'ceo',
+  AI = "ai",
+  Founder = "founder",
+  Marketer = "marketer",
+  DigitalAdvertiser = "digital-advertiser",
+  Solopreneur = "solopreneur",
+  LeadgenSpecialist = "leadgen-specialist",
+  // CEO = 'ceo',
 }
 
 // export interface NewsletterProps {

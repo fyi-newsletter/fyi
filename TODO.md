@@ -17,7 +17,7 @@ Quick follow-up:
 - most signups do not confirm signup using email link
   - revamp form
     <!-- - Add caption that user will get need to confirm using email link -->
-    <!-- - Add a checkbox: "☑ I understand I need to confirm my email to start receiving T5MM" -->
+    <!-- - Add a checkbox: "☑ I understand I need to confirm my email to start receiving FYI" -->
   - revamp post form submit page
     <!-- - show an ordered list of what they need to do -->
     - make it visually obvious that they just got an email and need to confirm
@@ -34,7 +34,7 @@ Quick follow-up:
   - confirm reminder (with unsubscribe/manage subscriptions button)
     - max 3 reminders (2h, 24h, 72h)
 
-  - use separate domain for emails (mail.thefiveminutemail.com)
+  - use separate domain for emails (mail.readfyi.com)
   - "Keep confirmation emails on a separate stream/IP from future newsletters"
   - Add social proof
 

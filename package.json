@@ -1,5 +1,5 @@
 {
-  "name": "t5mm",
+  "name": "fyi",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HTeker/t5mm.com.git"
+    "url": "git+https://github.com/fyi-newsletter/fyi.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/HTeker/t5mm.com/issues"
+    "url": "https://github.com/fyi-newsletter/fyi/issues"
   },
-  "homepage": "https://github.com/HTeker/t5mm.com#readme",
+  "homepage": "https://github.com/fyi-newsletter/fyi#readme",
   "description": "",
   "workspaces": [
     "packages/*"

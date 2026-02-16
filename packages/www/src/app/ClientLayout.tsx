@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import i18n from "./i18n";
-import { TrackingPlatformEnum, TrackingProvider } from "@t5mm-com/tracking";
+import { TrackingPlatformEnum, TrackingProvider } from "@fyi-newsletter/tracking";
 import Script from "next/script";
 
 const InnerClientLayout: React.FC<{ children: React.ReactNode }> = ({
@@ -22,8 +22,8 @@ const InnerClientLayout: React.FC<{ children: React.ReactNode }> = ({
           {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
           <a href="/">
             <Image
-              src="/img/t5mm-logo-dark-mode.svg"
-              alt="T5MM Logo"
+              src="/img/fyi-logo-dark-mode.svg"
+              alt="FYI Logo"
               width={108}
               height={32}
             />

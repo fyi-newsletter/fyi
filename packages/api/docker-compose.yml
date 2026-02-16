@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   db:
-    container_name: t5mm_db
+    container_name: fyi_db
     image: postgres:15
     env_file:
       - .env

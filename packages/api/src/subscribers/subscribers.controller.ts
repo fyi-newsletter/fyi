@@ -1,5 +1,5 @@
 import { Body, Controller, Logger, Param, Post } from '@nestjs/common';
-import { SubscriberProps } from '@t5mm-com/shared';
+import { SubscriberProps } from '@fyi-newsletter/shared';
 import { SubscribersService } from 'src/subscribers/subscribers.service';
 
 import * as fs from 'fs';
@@ -58,7 +58,7 @@ export class SubscribersController {
 
     await this.emailService.send({
       to: [{ email: subscriber.email, name: '' }],
-      subject: 'Confirm your T5MM subscription (5 seconds)',
+      subject: 'Confirm your FYI subscription (5 seconds)',
       htmlBody,
     });
 

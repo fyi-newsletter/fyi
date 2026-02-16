@@ -1,4 +1,4 @@
-# T5MM
+# FYI
 
 ## Entities
 1. Newsletter
@@ -10,6 +10,14 @@
 ## Character counts
 - Main body: 430
 - Quick links body: 120
+
+## Newsletters
+Interest-based:
+- AI
+
+Role-based:
+- Marketer
+- Founder
 
 ## Potential headers
 - What’s Changing?
