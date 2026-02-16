@@ -1,6 +1,6 @@
 "use client";
 
-import { NewsletterEnum } from "@fyi-newsletter/shared";
+import { capitalizeFirst, NewsletterEnum } from "@fyi-newsletter/shared";
 import { TrackingEventEnum, useTracking } from "@fyi-newsletter/tracking";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -26,7 +26,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ newsletter }) => {
     formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm<FormData>({
     defaultValues: {
-      newsletters: [newsletter],
+      newsletters: newsletter ? [newsletter] : [],
       email: "",
     },
   });
@@ -76,9 +76,10 @@ const SignupForm: React.FC<SignupFormProps> = ({ newsletter }) => {
     );
   };
 
-  const newsletterLabel = newsletter ? t(newsletter) : "Newsletter";
+  const newsletterLabel = newsletter
+    ? capitalizeFirst(t(newsletter))
+    : "Newsletter";
   const newsletterEmoji = newsletter ? t(`${newsletter}_emoji`) : "📰";
-  //   const professionLabel = newsletter ? t(newsletter) : "professional";
   const subheader = newsletter
     ? t(`${newsletter}_subheader`)
     : "Become a better professional in 5 mins.";
@@ -87,19 +88,10 @@ const SignupForm: React.FC<SignupFormProps> = ({ newsletter }) => {
     <div style={{ maxWidth: "30rem", textAlign: "center" }}>
       {!isSubmitSuccessful ? (
         <>
-          {/* <p>FYI Newsletter</p> */}
           <h1>
             FYI: {newsletterLabel} {newsletterEmoji}
           </h1>
           <h2>{subheader}</h2>
-          {/* <h1>
-              Become a<br />
-              <span className="underlined">
-                better <span suppressHydrationWarning>{role}</span>
-              </span>
-              <br />
-              in 5 minutes a day.
-            </h1> */}
           <p>
             Get our free daily newsletter with curated trends, tactics and
             tools.
