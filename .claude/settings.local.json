@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(dir /b \"c:\\\\Git\\\\fyi\\\\packages\\\\www\\\\next.config.*\")",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(npm install:*)"
     ]
   }
 }
