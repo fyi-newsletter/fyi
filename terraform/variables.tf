@@ -32,7 +32,7 @@ variable "db_instance_tier" {
 variable "cloudflare_email" {
   description = "Email for Cloudflare"
   type = string
-  default = "halil@readfyi.com"
+  default = "newsletter@readfyi.com"
 }
 
 variable "cloudflare_account_id" {
