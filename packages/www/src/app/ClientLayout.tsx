@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import i18n from "./i18n";
-import { TrackingPlatformEnum, TrackingProvider } from "@fyi-newsletter/tracking";
+import { TrackingPlatformEnum, TrackingProvider } from "@readfyi/tracking";
 import Script from "next/script";
 
 const InnerClientLayout: React.FC<{ children: React.ReactNode }> = ({

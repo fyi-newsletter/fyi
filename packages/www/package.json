@@ -9,8 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@fyi-newsletter/shared": "*",
-    "@fyi-newsletter/tracking": "1.0.14",
+    "@readfyi/shared": "*",
+    "@readfyi/tracking": "1.0.14",
     "i18next": "^25.7.3",
     "next": "16.1.1",
     "react": "19.2.3",

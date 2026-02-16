@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization = "fyi"
+    organization = "readfyi"
 
     workspaces {
       tags = ["workspace"]

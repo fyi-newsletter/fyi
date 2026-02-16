@@ -12,12 +12,12 @@ variable "api_image_tag" {
 
 variable "db_name" {
   type    = string
-  default = "fyi"
+  default = "readfyi"
 }
 
 variable "db_user" {
   type    = string
-  default = "fyi_user"
+  default = "readfyi_user"
 }
 
 variable "db_password" {

@@ -1,7 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { isValidEmail } from '@fyi-newsletter/shared';
-import { isProdLike } from '@fyi-newsletter/shared';
+import { isValidEmail } from '@readfyi/shared';
+import { isProdLike } from '@readfyi/shared';
 import { SendMailClient } from 'zeptomail';
 
 interface SendEmailParams {

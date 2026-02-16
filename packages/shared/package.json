@@ -1,5 +1,5 @@
 {
-  "name": "@fyi-newsletter/shared",
+  "name": "@readfyi/shared",
   "version": "1.0.1",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

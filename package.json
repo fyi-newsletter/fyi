@@ -1,5 +1,5 @@
 {
-  "name": "fyi",
+  "name": "readfyi.com",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fyi-newsletter/fyi.git"
+    "url": "git+https://github.com/readfyi/readfyi.com.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fyi-newsletter/fyi/issues"
+    "url": "https://github.com/readfyi/readfyi.com/issues"
   },
-  "homepage": "https://github.com/fyi-newsletter/fyi#readme",
+  "homepage": "https://github.com/readfyi/readfyi.com#readme",
   "description": "",
   "workspaces": [
     "packages/*"

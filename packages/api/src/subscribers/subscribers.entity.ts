@@ -1,6 +1,6 @@
 import { Entity, Column, Index, OneToMany } from 'typeorm';
 import { BaseEntity } from '../common/base.entity';
-import { SubscriberProps } from '@fyi-newsletter/shared';
+import { SubscriberProps } from '@readfyi/shared';
 import { SubscriptionsEntity } from 'src/subscriptions/subscriptions.entity';
 
 @Entity('subscribers')

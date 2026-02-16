@@ -1,5 +1,5 @@
 import SignupForm from "@/app/components/SignupForm";
-import { NewsletterEnum } from "@fyi-newsletter/shared";
+import { NewsletterEnum } from "@readfyi/shared";
 
 export function generateStaticParams() {
   return Object.values(NewsletterEnum).map((n) => ({ id: n }));

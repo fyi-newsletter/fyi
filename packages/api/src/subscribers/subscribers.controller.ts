@@ -1,5 +1,5 @@
 import { Body, Controller, Logger, Param, Post } from '@nestjs/common';
-import { SubscriberProps } from '@fyi-newsletter/shared';
+import { SubscriberProps } from '@readfyi/shared';
 import { SubscribersService } from 'src/subscribers/subscribers.service';
 
 import * as fs from 'fs';

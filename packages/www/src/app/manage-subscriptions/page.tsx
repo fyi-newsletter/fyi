@@ -4,7 +4,7 @@ import {
   capitalizeFirst,
   NewsletterEnum,
   useSubscriptions,
-} from "@fyi-newsletter/shared";
+} from "@readfyi/shared";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";

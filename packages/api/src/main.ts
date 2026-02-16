@@ -1,6 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { getRootDomain } from '@fyi-newsletter/shared';
+import { getRootDomain } from '@readfyi/shared';
 
 const allowedDomains = [
 	'localhost',

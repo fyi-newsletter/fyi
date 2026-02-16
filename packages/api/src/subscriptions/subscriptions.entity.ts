@@ -7,7 +7,7 @@ import {
   AfterLoad,
 } from 'typeorm';
 import { BaseEntity } from '../common/base.entity';
-import { NewsletterEnum, SubscriptionProps } from '@fyi-newsletter/shared';
+import { NewsletterEnum, SubscriptionProps } from '@readfyi/shared';
 import { SubscribersEntity } from 'src/subscribers/subscribers.entity';
 
 @Entity('subscriptions')

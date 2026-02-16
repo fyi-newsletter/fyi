@@ -1,16 +1,12 @@
 # Phase 0: acquire subscribers sustainably
 
-<<<<<<< Updated upstream
 Problems to solve:
-=======
 Quick follow-up:
 <!-- - redirect alternative domains to primary -->
 <!-- - disable Meetgen QA -->
 <!-- - searchparams -->
 - verify reminder up to 7 days
 - unsubscribe all
-
->>>>>>> Stashed changes
 
 <!-- - conversions are not being tracked -> double-check pixel + CAPI -->
 

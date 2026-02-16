@@ -2,10 +2,10 @@ import { Body, Controller, Get, Post, Put, Query } from '@nestjs/common';
 import {
   CreateSubscriptionsRequest,
   UpdateSubscriptionsRequest,
-} from '@fyi-newsletter/shared';
+} from '@readfyi/shared';
 import { SubscriptionsService } from './subscriptions.service';
 import { SubscribersService } from 'src/subscribers/subscribers.service';
-import { NewsletterEnum } from '@fyi-newsletter/shared';
+import { NewsletterEnum } from '@readfyi/shared';
 
 @Controller('subscriptions')
 export class SubscriptionsController {

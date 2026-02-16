@@ -1,7 +1,7 @@
 "use client";
 
-import { capitalizeFirst, NewsletterEnum } from "@fyi-newsletter/shared";
-import { TrackingEventEnum, useTracking } from "@fyi-newsletter/tracking";
+import { capitalizeFirst, NewsletterEnum } from "@readfyi/shared";
+import { TrackingEventEnum, useTracking } from "@readfyi/tracking";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
