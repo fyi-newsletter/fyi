@@ -3,7 +3,8 @@
     "allow": [
       "Bash(dir /b \"c:\\\\Git\\\\fyi\\\\packages\\\\www\\\\next.config.*\")",
       "Bash(ls:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(git remote set-url:*)"
     ]
   }
 }
