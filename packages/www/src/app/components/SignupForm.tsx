@@ -96,52 +96,55 @@ const SignupForm: React.FC<SignupFormProps> = ({ newsletter }) => {
             Get our free daily newsletter with curated trends, tactics and
             tools.
           </p>
-          <br />
           <form onSubmit={handleSubmit(onSubmit)} style={{ width: "100%" }}>
-            {/* <p>
-                <b>Newsletters:</b>
-              </p>
-              <div
-                style={{
-                  display: "inline-flex",
-                  flexDirection: "column",
-                  gap: ".5rem",
-                }}
-              >
-                {Object.values(NewsletterEnum).map((newsletter, index) => (
-                  <label
-                    key={index}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: ".35rem",
-                    }}
-                  >
-                    <input
-                      type="checkbox"
-                      value={newsletter}
-                      {...register("newsletters", {
-                        validate: (value) =>
-                          value.length > 0 ||
-                          "Please select at least one newsletter",
-                      })}
-                    />
-                    {capitalizeFirst(t(newsletter))}
-                  </label>
-                ))}
-                {errors.newsletters && (
-                  <p
-                    style={{
-                      color: "#ff4444",
-                      fontSize: ".9rem",
-                      margin: ".25rem 0 0 0",
-                    }}
-                  >
-                    {errors.newsletters.message}
-                  </p>
-                )}
+            {!newsletter && (
+              <div style={{ margin: '1.5rem' }}>
+                <p>
+                  <b>Newsletters:</b>
+                </p>
+                <div
+                  style={{
+                    display: "inline-flex",
+                    flexDirection: "column",
+                    gap: ".5rem",
+                  }}
+                >
+                  {Object.values(NewsletterEnum).map((newsletter, index) => (
+                    <label
+                      key={index}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: ".35rem",
+                      }}
+                    >
+                      <input
+                        type="checkbox"
+                        value={newsletter}
+                        {...register("newsletters", {
+                          validate: (value) =>
+                            value.length > 0 ||
+                            "Please select at least one newsletter",
+                        })}
+                      />
+                      {capitalizeFirst(t(newsletter))}
+                    </label>
+                  ))}
+                  {errors.newsletters && (
+                    <p
+                      style={{
+                        color: "#ff4444",
+                        fontSize: ".9rem",
+                        margin: ".25rem 0 0 0",
+                      }}
+                    >
+                      {errors.newsletters.message}
+                    </p>
+                  )}
+                </div>
               </div>
-              <br /> */}
+            )}
+			<br />
             <div className="form-submit-group">
               <div>
                 <input

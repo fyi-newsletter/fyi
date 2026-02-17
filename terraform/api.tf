@@ -95,13 +95,19 @@ resource "google_cloud_run_v2_service" "api" {
 	}
 }
 
-resource "google_cloud_run_v2_service_iam_member" "public_access" {
-	count    = local.is_prod_like ? 1 : 0
-	name     = google_cloud_run_v2_service.api[count.index].name
-	location = google_cloud_run_v2_service.api[count.index].location
-	project  = local.host_key
-	role     = "roles/run.invoker"
-	member   = "allUsers"
+resource "google_cloud_run_service_iam_policy" "public_access" {
+	count      = local.is_prod_like ? 1 : 0
+	location	= google_cloud_run_v2_service.api[count.index].location
+	service 	= google_cloud_run_v2_service.api[count.index].name
+
+	policy_data = <<EOT
+	{
+		"bindings": [{
+			"role":	"roles/run.invoker",
+			"members": ["allUsers"]
+		}]
+	}
+	EOT
 }
 
 resource "google_cloud_run_domain_mapping" "api_domain_mapping" {
