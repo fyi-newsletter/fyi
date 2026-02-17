@@ -24,7 +24,7 @@ Quick follow-up:
   - Revamp confirmation email
     <!-- - Move deliverability optimization steps after email confirmation and simplify confirmation email -->
     - Add preview text to confirmation email
-    <!-- - Make email name more human instead of "The Five Minute Mail" -->
+    <!-- - Make email name more human instead of "FYI Newsletter" -->
     <!-- - Add non-button confirmation link -->
     <!-- - ? change subject to be more action-oriented -->
   - confirm reminder (with unsubscribe/manage subscriptions button)
