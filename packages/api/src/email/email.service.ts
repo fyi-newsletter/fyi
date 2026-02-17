@@ -42,7 +42,7 @@ export class EmailService {
     return this.zeptoClient.sendMail({
       from: {
         address: 'newsletter@readfyi.com',
-        name: 'FYI by Halil',
+        name: 'FYI Newsletter',
       },
       to: params.to.map((to) => ({
         email_address: { address: to.email, name: to.name },
