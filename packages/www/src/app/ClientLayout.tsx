@@ -5,12 +5,24 @@ import Image from "next/image";
 import Link from "next/link";
 
 import i18n from "./i18n";
-import { TrackingPlatformEnum, TrackingProvider } from "@readfyi/tracking";
+import {
+  TrackingEventEnum,
+  TrackingPlatformEnum,
+  TrackingProvider,
+  useTracking,
+} from "@readfyi/tracking";
 import Script from "next/script";
+import { useEffect } from "react";
 
 const InnerClientLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
+  const { track } = useTracking();
+
+  useEffect(() => {
+    track(TrackingEventEnum.ViewContent);
+  }, [track]);
+  
   return (
     <I18nextProvider i18n={i18n}>
       <Script
