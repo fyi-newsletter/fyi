@@ -12,7 +12,7 @@ terraform {
 }
 
 provider "google" {
-  credentials = file("tf5mm-com.service-account.json")
+#   credentials = file("readfyi-com.service-account.json")
   project = local.host_key
   region  = var.region
 }
